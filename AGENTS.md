@@ -1,1 +1,1 @@
-YOU MUST TEST OUT ANY NEW DEVELOPMENTS BY TESTING THE GRAMMAR CHECKER AGAINST An Occurrence at Owl Creek Bridge
+YOU MUST TEST OUT ANY NEW DEVELOPMENTS BY TESTING THE GRAMMAR CHECKER AGAINST the first paragraph of “Pride and Prejudice”, English Wikipedia article introductions, The Gettysburg Address, and Martin Luther King Jr.’s “I Have a Dream”
