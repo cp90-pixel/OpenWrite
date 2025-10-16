@@ -48,3 +48,21 @@ def test_double_spaces(checker: GrammarChecker) -> None:
     text = "This  sentence has double spaces."
     issues = checker.check(text)
     assert any(issue.rule == "double-space" for issue in issues)
+
+
+def test_detects_tense_mismatch(checker: GrammarChecker) -> None:
+    text = "She walks to the store and bought milk."
+    issues = checker.check(text)
+    assert any(issue.rule == "verb-tense" for issue in issues)
+
+
+def test_allows_consistent_tense(checker: GrammarChecker) -> None:
+    text = "She walked to the store and bought milk."
+    issues = checker.check(text)
+    assert not any(issue.rule == "verb-tense" for issue in issues)
+
+
+def test_allows_present_perfect(checker: GrammarChecker) -> None:
+    text = "She has walked to the store many times."
+    issues = checker.check(text)
+    assert not any(issue.rule == "verb-tense" for issue in issues)
